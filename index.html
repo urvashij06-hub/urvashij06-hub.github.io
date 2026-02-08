@@ -2,141 +2,189 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Urvashi Joshi | PhD Student</title>
+<title>Urvashi Joshi | PhD Scholar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{box-sizing:border-box;}
+
 body{
   margin:0;
   font-family:Inter,system-ui,sans-serif;
-  background:#ffffff;
-  color:#1f2937;
-  line-height:1.7;
+  background:#000;
+  color:#e5e7eb;
+  line-height:1.75;
 }
 
-.container{
-  max-width:980px;
-  margin:auto;
-  padding:40px 20px;
-}
-
+/* ===== Top Bar ===== */
 header{
+  position:fixed;
+  top:0; left:0; right:0;
+  background:rgba(0,0,0,0.9);
+  z-index:1000;
+  border-bottom:1px solid #111;
+}
+
+.navbar{
+  max-width:1100px;
+  margin:auto;
+  padding:14px 20px;
   display:flex;
-  gap:40px;
+  justify-content:space-between;
   align-items:center;
-  margin-bottom:40px;
 }
 
-header img{
-  width:200px;
-  border-radius:10px;
-  object-fit:cover;
-}
-
-nav{
-  border-top:1px solid #eee;
-  border-bottom:1px solid #eee;
-  padding:12px 0;
-  margin-bottom:40px;
+.brand{
+  font-weight:700;
+  color:#fff;
+  letter-spacing:0.4px;
 }
 
 nav a{
-  margin-right:18px;
+  color:#d1d5db;
   text-decoration:none;
-  color:#374151;
-  font-weight:500;
+  margin-left:18px;
+  font-size:14px;
 }
 
 nav a:hover{
-  color:#4f46e5;
+  color:#f59e0b;
 }
 
-h1{margin-bottom:6px;}
-h2{
-  margin-top:60px;
-  border-bottom:1px solid #eee;
-  padding-bottom:6px;
+/* ===== Hero ===== */
+.hero{
+  height:65vh;
+  background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
+    url("profile.png.jpeg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+.hero h1{
+  font-size:40px;
+  margin-bottom:10px;
+  color:#fff;
+}
+
+.hero p{
+  font-size:18px;
+  color:#e5e7eb;
+  max-width:800px;
+}
+
+/* ===== Main ===== */
+.main{
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+section{
+  margin-bottom:70px;
+}
+
+section h2{
+  color:#f59e0b;
+  margin-bottom:20px;
+  font-size:24px;
 }
 
 ul,ol{
-  padding-left:18px;
+  padding-left:20px;
 }
 
-.section{
-  margin-top:30px;
+li{
+  margin-bottom:8px;
 }
 
-.small{
-  color:#6b7280;
+/* small separator */
+.line{
+  width:120px;
+  height:2px;
+  background:#f59e0b;
+  margin:30px 0;
 }
 
+footer{
+  text-align:center;
+  padding:40px 0;
+  color:#9ca3af;
+  font-size:14px;
+}
+
+/* spacing for fixed menu */
+.offset{
+  height:60px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
 <header>
-  <img src="profile.png.jpeg" alt="Urvashi Joshi">
+  <div class="navbar">
+    <div class="brand">Urvashi Joshi</div>
 
-  <div>
-    <h1>Urvashi Joshi</h1>
-    <p><b>PhD Student, Applied Mathematics & Scientific Computing</b></p>
-    <p class="small">
-      Indian Institute of Technology Roorkee, India<br>
-      Email: urvashij@amsc.iitr.ac.in
-    </p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#conferences">Workshops & Conferences</a>
+      <a href="#experience">Experience</a>
+      <a href="#positions">Positions</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 </header>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#education">Education</a>
-  <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
-  <a href="#conferences">Workshops & Conferences</a>
-  <a href="#experience">Work Experience</a>
-  <a href="#achievements">Achievements & Skills</a>
-  <a href="#positions">Positions & Responsibilities</a>
-  <a href="#contact">Contact</a>
-</nav>
+<div class="offset" id="home"></div>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section">
-<h2>About</h2>
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div>
+    <h1>Urvashi Joshi</h1>
+    <p>PhD Research Scholar · Applied Mathematics & Scientific Computing · IIT Roorkee</p>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+
+<h2>About Me</h2>
+<div class="line"></div>
+
 <p>
-I am a PhD student in the Department of Applied Mathematics and Scientific Computing at
-the Indian Institute of Technology Roorkee. My research focuses on nonlinear partial
-differential equations, conservation laws, Lie symmetry analysis, exact and invariant
-solutions, and numerical and data-driven methods for complex physical and biological
-systems. I am also interested in physics-informed neural networks for PDE-based models.
+I am a PhD research scholar in the Department of Applied Mathematics and Scientific Computing at
+the Indian Institute of Technology Roorkee, working at the intersection of nonlinear partial
+differential equations, symmetry methods and modern data-driven techniques.
+My research explores how mathematical structures such as Lie symmetries, conservation laws
+and self-similar solutions can be systematically used to understand and simplify complex
+physical and biological systems, including traffic flow and population dynamics models.
+
+Alongside analytical and semi-analytical approaches, I am actively interested in integrating
+machine learning and physics-informed neural networks with classical PDE modelling to develop
+reliable and interpretable computational frameworks for complex dynamical systems.
+My long-term goal is to bridge rigorous mathematical analysis with emerging AI-based tools for
+next-generation scientific computing.
 </p>
+
+
 </section>
 
-<!-- ================= EDUCATION ================= -->
-<section id="education" class="section">
-<h2>Education</h2>
+<!-- ===== RESEARCH ===== -->
+<section id="research">
 
-<ul>
-  <li>
-    <b>Ph.D. in Applied Mathematics and Scientific Computing</b>,
-    Indian Institute of Technology Roorkee, India.<br>
-    CGPA: 8.857
-  </li>
-  <li>
-    <b>Integrated M.Sc. in Applied Mathematics and Humanities (2017–2022)</b>,
-    National Institute of Technology Surat, India.<br>
-    CGPA: 8.00
-  </li>
-</ul>
-</section>
-
-<!-- ================= RESEARCH ================= -->
-<section id="research" class="section">
-<h2>Research Interests</h2>
+<h2>Research Areas</h2>
+<div class="line"></div>
 
 <ul>
   <li>Nonlinear partial differential equations</li>
@@ -144,13 +192,35 @@ systems. I am also interested in physics-informed neural networks for PDE-based 
   <li>Conservation laws</li>
   <li>Exact and solitonic solutions</li>
   <li>Numerical simulation of PDEs</li>
-  <li>Physics-informed neural networks</li>
+  <li>Physics-informed neural networks for PDEs</li>
 </ul>
+
 </section>
 
-<!-- ================= PUBLICATIONS ================= -->
-<section id="publications" class="section">
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+
+<h2>Educational Background</h2>
+<div class="line"></div>
+
+<ul>
+  <li>
+    <b>Ph.D. in Applied Mathematics and Scientific Computing</b>,  
+    Indian Institute of Technology Roorkee, India (ongoing).
+  </li>
+  <li>
+    <b>Integrated M.Sc. in Applied Mathematics and Humanities (2017–2022)</b>,  
+    National Institute of Technology Surat, India.
+  </li>
+</ul>
+
+</section>
+
+<!-- ===== PUBLICATIONS ===== -->
+<section id="publications">
+
 <h2>Publications & Preprints</h2>
+<div class="line"></div>
 
 <ol>
   <li>
@@ -165,127 +235,92 @@ systems. I am also interested in physics-informed neural networks for PDE-based 
     Non-Ideal Radiating Gas (under preparation).
   </li>
 </ol>
+
 </section>
 
-<!-- ================= WORKSHOPS & CONFERENCES ================= -->
-<section id="conferences" class="section">
+<!-- ===== WORKSHOPS & CONFERENCES ===== -->
+<section id="conferences">
+
 <h2>Workshops & Conferences</h2>
+<div class="line"></div>
 
 <ul>
   <li>
-    Workshop on Unified Approaches to Solving Differential Equations: From Classical
-    Methods to Neural Networks (UniSDE-2025), organised by NIT Hamirpur and IIITDM Jabalpur.
+    Workshop on Unified Approaches to Solving Differential Equations:
+    From Classical Methods to Neural Networks (UniSDE-2025).
   </li>
   <li>
-    International Conference on Nonlinear Applied Analysis and Optimization (ICNAAO 2025) –
-    Paper presentation: “Solitonic and Exact Solutions for a Viscous Traffic Flow Model via
-    Lie Symmetry”.
+    International Conference on Nonlinear Applied Analysis and Optimization (ICNAAO 2025) – paper presentation.
   </li>
   <li>
-    University of North Carolina at Greensboro Virtual Conference on Partial Differential
-    Equations (UNC Greensboro Virtual PDE Conference 2025) – Paper presentation.
+    University of North Carolina at Greensboro Virtual Conference on Partial Differential Equations
+    (UNC Greensboro Virtual PDE Conference 2025).
   </li>
   <li>
-    International Conference on Recent Advances in Applied Mathematics (RAAM 2024) –
-    Paper presentation.
+    International Conference on Recent Advances in Applied Mathematics (RAAM 2024).
   </li>
   <li>
-    Workshop on Multi-Scale Analysis cum Conference on Differential Equations (MSADE-24),
-    IIT Ropar, 2024.
-  </li>
-  <li>
-    Short-Term Training Programme on Mathematical Modelling and Simulation in Physical
-    Sciences, NIT Surat, 2020.
-  </li>
-  <li>
-    Summer Internship Programme on System Modelling Using Equations and Ordinary
-    Differential Equations, NIT Prayagraj, 2019.
-  </li>
-  <li>
-    Inquest 3.0 – Queuing Theory, NIT Surat, 2017.
+    Workshop on Multi-Scale Analysis cum Conference on Differential Equations (MSADE-24), IIT Ropar.
   </li>
 </ul>
+
 </section>
 
-<!-- ================= WORK EXPERIENCE ================= -->
-<section id="experience" class="section">
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+
 <h2>Work Experience</h2>
+<div class="line"></div>
 
 <ul>
   <li>Telus Digital – LLM Trainer (Project Sigma), 2025.</li>
   <li>Turing – LLM Trainer, 2025.</li>
   <li>Outlier – LLM Trainer, 2025.</li>
 </ul>
+
 </section>
 
-<!-- ================= ACHIEVEMENTS & SKILLS ================= -->
-<section id="achievements" class="section">
-<h2>Achievements & Soft Skills</h2>
+<!-- ===== POSITIONS ===== -->
+<section id="positions">
 
-<h4>Achievements</h4>
+<h2>Positions & Responsibilities</h2>
+<div class="line"></div>
+
 <ul>
-  <li>Qualified GATE (Mathematics) 2025 – AIR 755</li>
-  <li>Qualified GATE (Mathematics) 2024 – AIR 1020</li>
-  <li>Qualified GATE (Mathematics) 2022 – AIR 576</li>
-  <li>Qualified JEE (Main) 2017 – AIR 29879</li>
+  <li>Student Ambassador – IIT Kanpur, June 2021.</li>
+  <li>Volunteer – Think India (All India NIT Students Conference), 2019.</li>
+  <li>Volunteer – Prakriti (SCOSH), NIT Surat, 2018.</li>
 </ul>
 
-<h4>Technical & Soft Skills</h4>
-<ul>
-  <li>MATLAB, LaTeX, Maple, Mathematica, C, C++, Python</li>
-  <li>Adaptability and learning agility</li>
-  <li>Critical thinking</li>
-  <li>Problem-solving</li>
-</ul>
 </section>
 
-<!-- ================= POSITIONS ================= -->
-<section id="positions" class="section">
-<h2>Positions, Responsibilities & Extra-Curriculars</h2>
+<!-- ===== CONTACT ===== -->
+<section id="contact">
 
-<ul>
-  <li>
-    Volunteer – 13th International Conference on Soft Computing for Problem Solving
-    (SocProS 2025), IIT Roorkee.
-  </li>
-  <li>
-    Author and Presenter – 2nd International Conference on Recent Advances in Applied
-    Mathematics (RAAM 2024).
-  </li>
-  <li>
-    Student Ambassador – IIT Kanpur, June 2021.
-  </li>
-  <li>
-    Volunteer – Think India (All India NIT Students Conference), 2019.
-  </li>
-  <li>
-    Volunteer – Prakriti (SCOSH), NIT Surat, 2018.
-  </li>
-</ul>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section">
-<h2>Contact</h2>
+<h2>Contact & Reference</h2>
+<div class="line"></div>
 
 <p>
 Email: <b>urvashij@amsc.iitr.ac.in</b><br>
-Department of Applied Mathematics and Scientific Computing,<br>
+Department of Applied Mathematics and Scientific Computing<br>
 Indian Institute of Technology Roorkee, India
 </p>
 
-<h4>Reference</h4>
 <p>
+<b>Reference:</b><br>
 Prof. Rajan Arora<br>
 Professor, Department of Applied Mathematics and Scientific Computing, IIT Roorkee<br>
-Email: rajan.arora@as.iitr.ac.in<br>
-Webpage:
-<a href="https://iitr.ac.in/Departments/Applied%20Mathematics%20and%20Scientific%20Computing%20Department/People/Faculty/400119.html" target="_blank">
-Official Faculty Profile
+<a style="color:#f59e0b" target="_blank"
+href="https://iitr.ac.in/Departments/Applied%20Mathematics%20and%20Scientific%20Computing%20Department/People/Faculty/400119.html">
+Official Faculty Webpage
 </a>
 </p>
 
 </section>
+
+<footer>
+© Urvashi Joshi
+</footer>
 
 </div>
 
