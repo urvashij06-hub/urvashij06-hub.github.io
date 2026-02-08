@@ -17,27 +17,39 @@
   --card:#ffffff;
   --border:#eef0f6;
 }
+
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+
 body{
   margin:0;
   font-family:"Plus Jakarta Sans",system-ui,sans-serif;
   background:var(--bg);
   color:var(--text);
 }
+
+/* Layout */
 .main{
   display:flex;
   min-height:100vh;
 }
+
+/* Sidebar */
 .sidebar{
-  width:220px;
+  width:240px;
   background:var(--white);
   border-right:1px solid var(--border);
   padding:40px 24px;
   position:fixed;
   top:0;left:0;bottom:0;
+  overflow-y:auto;
 }
-.sidebar h2{margin:0 0 30px 0;font-size:18px;}
+
+.sidebar h2{
+  margin:0 0 30px 0;
+  font-size:18px;
+}
+
 .sidebar a{
   display:block;
   text-decoration:none;
@@ -45,18 +57,28 @@ body{
   font-weight:500;
   margin-bottom:18px;
 }
+
 .sidebar a:hover{color:var(--primary);}
+
+/* Content */
 .content{
-  margin-left:220px;
+  margin-left:240px;
   width:100%;
   padding:50px 60px;
 }
+
+/* Show / hide */
+.page-section{display:none;}
+.page-section.active{display:block;}
+
+/* Home layout */
 .hero{
   display:grid;
   grid-template-columns:320px 1fr;
   gap:50px;
   align-items:center;
 }
+
 .photo-box{
   background:var(--card);
   padding:16px;
@@ -64,44 +86,54 @@ body{
   box-shadow:0 20px 40px rgba(0,0,0,.05);
   text-align:center;
 }
+
 .photo-box img{
   width:100%;
   border-radius:14px;
   object-fit:cover;
 }
+
 .hero h1{margin:0;font-size:38px;font-weight:700;}
 .hero h3{margin:10px 0 14px 0;font-weight:500;color:var(--primary);}
-.hero p{color:var(--muted);line-height:1.8;max-width:720px;}
-.hero-buttons{margin-top:24px;display:flex;gap:14px;}
-.btn{
-  text-decoration:none;
-  padding:10px 18px;
-  border-radius:10px;
-  font-weight:600;
-  font-size:14px;
+.hero p{color:var(--muted);line-height:1.8;}
+
+section h2{
+  font-size:26px;
+  margin:60px 0 26px 0;
 }
-.btn-main{background:var(--primary);color:white;}
-.btn-soft{border:1px solid var(--primary);color:var(--primary);}
-section{margin-top:80px;}
-section h2{font-size:26px;margin-bottom:26px;}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:22px;
-}
+
 .card{
   background:var(--card);
   border-radius:18px;
   padding:26px;
   border:1px solid var(--border);
+  max-width:950px;
 }
-.card ul,.card ol{padding-left:18px;line-height:1.8;}
-.card li{margin-bottom:8px;}
-footer{margin-top:80px;color:var(--muted);font-size:14px;}
+
+.card ul,.card ol{
+  padding-left:18px;
+  line-height:1.8;
+}
+
+.card h4{
+  margin-top:20px;
+  margin-bottom:10px;
+  color:#374151;
+}
+
+footer{
+  margin-top:80px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* Mobile */
 @media(max-width:900px){
   .sidebar{
-    position:relative;width:100%;
-    border-right:none;border-bottom:1px solid var(--border);
+    position:relative;
+    width:100%;
+    border-right:none;
+    border-bottom:1px solid var(--border);
   }
   .content{margin-left:0;padding:40px 24px;}
   .hero{grid-template-columns:1fr;}
@@ -113,106 +145,243 @@ footer{margin-top:80px;color:var(--muted);font-size:14px;}
 
 <div class="main">
 
+<!-- Sidebar -->
 <aside class="sidebar">
   <h2>Urvashi Joshi</h2>
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
-  <a href="#conferences">Conferences</a>
-  <a href="#contact">Contact</a>
+
+  <a href="#home" data-section="home">Home</a>
+  <a href="#publications" data-section="publications">Publications</a>
+  <a href="#conferences" data-section="conferences">Workshops & Conferences</a>
+  <a href="#achievements" data-section="achievements">Achievements & Skills</a>
+  <a href="#positions" data-section="positions">Positions</a>
+  <a href="#experience" data-section="experience">Experience</a>
+  <a href="#contact" data-section="contact">Contact</a>
 </aside>
 
 <div class="content">
 
-<section class="hero" id="about">
+<!-- ================= HOME ================= -->
+<section id="home" class="page-section">
 
-  <div class="photo-box">
-    <img src="profile.png.jpeg">
-  </div>
+  <div class="hero">
 
-  <div>
-    <h1>Urvashi Joshi</h1>
-    <h3>PhD Student · Applied Mathematics & Scientific Computing</h3>
-
-    <p>
-    I am a PhD student at the Indian Institute of Technology Roorkee.
-    My research focuses on nonlinear partial differential equations,
-    conservation laws, Lie symmetry analysis, exact and invariant solutions,
-    and numerical and data-driven methods for complex physical and biological systems.
-    I am also interested in physics-informed neural networks for PDE-based models.
-    </p>
-
-    <div class="hero-buttons">
-      <a class="btn btn-main" href="#publications">View Publications</a>
-      <a class="btn btn-soft" href="#contact">Contact Me</a>
+    <div class="photo-box">
+      <img src="profile.png.jpeg" alt="Urvashi Joshi">
     </div>
+
+    <div>
+      <h1>Urvashi Joshi</h1>
+      <h3>PhD Student · Applied Mathematics & Scientific Computing</h3>
+
+      <p>
+      I am a PhD student in the Department of Applied Mathematics and Scientific Computing
+      at the Indian Institute of Technology Roorkee. My research focuses on nonlinear
+      partial differential equations, conservation laws, Lie symmetry analysis, exact and
+      invariant solutions, and numerical and data-driven methods for complex physical and
+      biological systems. I am also interested in physics-informed neural networks for
+      PDE-based models.
+      </p>
+    </div>
+
   </div>
 
-</section>
-
-<section id="research">
   <h2>Research Interests</h2>
-  <div class="cards">
-    <div class="card">
-      <ul>
-        <li>Nonlinear partial differential equations</li>
-        <li>Lie symmetry analysis and invariant solutions</li>
-        <li>Conservation laws</li>
-        <li>Exact and solitonic solutions</li>
-        <li>Numerical simulation of PDEs</li>
-        <li>Physics-informed neural networks</li>
-      </ul>
-    </div>
+
+  <div class="card">
+    <ul>
+      <li>Nonlinear partial differential equations</li>
+      <li>Lie symmetry analysis and invariant solutions</li>
+      <li>Conservation laws</li>
+      <li>Exact and solitonic solutions</li>
+      <li>Numerical simulation of PDEs</li>
+      <li>Physics-informed neural networks</li>
+    </ul>
   </div>
+
 </section>
 
-<section id="publications">
+<!-- ================= PUBLICATIONS ================= -->
+<section id="publications" class="page-section">
+
   <h2>Publications & Preprints</h2>
-  <div class="cards">
-    <div class="card">
-      <ol>
-        <li>
+
+  <div class="card">
+    <ol>
+      <li>
         Conservation Laws and Symmetry Driven Analysis for a Biological Population Model in Porous Media,
         <em>Pramana – Journal of Physics</em> (accepted).
-        </li>
-        <li>
+      </li>
+      <li>
         Solitonic and Exact Solutions for a Viscous Traffic Flow Model via Lie Symmetry (preprint).
-        </li>
-        <li>
-        Self-Similarity and Physics-Informed Neural Networks for Spherical Shock Waves in a Non-Ideal
-        Radiating Gas (under preparation).
-        </li>
-      </ol>
-    </div>
+      </li>
+      <li>
+        Self-Similarity and Physics-Informed Neural Networks for Spherical Shock Waves in a
+        Non-Ideal Radiating Gas (under preparation).
+      </li>
+    </ol>
   </div>
+
 </section>
 
-<section id="conferences">
+<!-- ================= CONFERENCES ================= -->
+<section id="conferences" class="page-section">
+
   <h2>Workshops & Conferences</h2>
-  <div class="cards">
-    <div class="card">
-      <ul>
-        <li>UniSDE-2025 – Workshop on Unified Approaches to Solving DEs</li>
-        <li>ICNAAO 2025 – Paper presentation</li>
-        <li>UNC Greensboro Virtual PDE Conference 2025 – Paper presentation</li>
-        <li>RAAM 2024 – Paper presentation</li>
-        <li>MSADE-24 – IIT Ropar</li>
-      </ul>
-    </div>
+
+  <div class="card">
+    <ul>
+      <li>
+        Workshop on Unified Approaches to Solving Differential Equations:
+        From Classical Methods to Neural Networks (<b>UniSDE-2025</b>), organised by
+        NIT Hamirpur and IIITDM Jabalpur.
+      </li>
+
+      <li>
+        International Conference on Nonlinear Applied Analysis and Optimization
+        (<b>ICNAAO 2025</b>) – Paper presentation:
+        “Solitonic and Exact Solutions for a Viscous Traffic Flow Model via Lie Symmetry”.
+      </li>
+
+      <li>
+        University of North Carolina at Greensboro Virtual Conference on Partial Differential Equations
+        (<b>UNC Greensboro Virtual PDE Conference 2025</b>) – Paper presentation:
+        “Solitonic and Exact Solutions for a Viscous Traffic Flow Model via Lie Symmetry”.
+      </li>
+
+      <li>
+        International Conference on Recent Advances in Applied Mathematics
+        (<b>RAAM 2024</b>) – Paper presentation:
+        “Invariance Analysis and Symmetry Reduction of Biological Population Model in Porous Media”.
+      </li>
+
+      <li>
+        Workshop on Multi-Scale Analysis cum Conference on Differential Equations
+        (<b>MSADE-24</b>), IIT Ropar, 2024.
+      </li>
+
+      <li>
+        Short-Term Training Programme on Mathematical Modelling and Simulation in Physical Sciences,
+        NIT Surat, 2020.
+      </li>
+
+      <li>
+        Summer Internship Programme on System Modelling Using Equations and Ordinary Differential Equations,
+        NIT Prayagraj, 2019.
+      </li>
+
+      <li>
+        Inquest 3.0 – Queuing Theory, NIT Surat, 2017.
+      </li>
+    </ul>
   </div>
+
 </section>
 
-<section id="contact">
+<!-- ================= ACHIEVEMENTS & SKILLS ================= -->
+<section id="achievements" class="page-section">
+
+  <h2>Achievements & Soft Skills</h2>
+
+  <div class="card">
+
+    <h4>Achievements</h4>
+    <ul>
+      <li>Qualified GATE (Mathematics) 2025 – AIR 755</li>
+      <li>Qualified GATE (Mathematics) 2024 – AIR 1020</li>
+      <li>Qualified GATE (Mathematics) 2022 – AIR 576</li>
+      <li>Qualified JEE (Main) 2017 – AIR 29879</li>
+    </ul>
+
+    <h4>Technical & Soft Skills</h4>
+    <ul>
+      <li>MATLAB, LaTeX, Maple, Mathematica, C, C++, Python</li>
+      <li>Adaptability and learning agility</li>
+      <li>Critical thinking</li>
+      <li>Problem-solving</li>
+    </ul>
+
+  </div>
+
+</section>
+
+<!-- ================= POSITIONS ================= -->
+<section id="positions" class="page-section">
+
+  <h2>Positions, Responsibilities & Extra-Curriculars</h2>
+
+  <div class="card">
+    <ul>
+      <li>
+        Volunteer – 13th International Conference on Soft Computing for Problem Solving
+        (SocProS 2025), IIT Roorkee, February 2025.
+      </li>
+
+      <li>
+        Author & Presenter – 2nd International Conference on Recent Advances in Applied Mathematics
+        (RAAM 2024), July 2024.
+      </li>
+
+      <li>
+        Participant – Workshop on Multi-Scale Analysis and Differential Equations
+        (MSADE-24), IIT Ropar, February–March 2024.
+      </li>
+
+      <li>
+        Volunteer – Think India (All India NIT Students Conference), 2019.
+      </li>
+
+      <li>
+        Volunteer – Prakriti (SCOSH), NIT Surat, 2018.
+      </li>
+
+      <li>
+        Student Ambassador – IIT Kanpur, June 2021.
+      </li>
+    </ul>
+  </div>
+
+</section>
+  
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="page-section">
+
+  <h2>Work Experience</h2>
+
+  <div class="card">
+    <ul>
+      <li>Telus Digital – LLM Trainer (Project Sigma), 2025.</li>
+      <li>Turing – LLM Trainer, 2025.</li>
+      <li>Outlier – LLM Trainer, 2025.</li>
+    </ul>
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="page-section">
+
   <h2>Contact</h2>
-  <div class="cards">
-    <div class="card">
-      <p>
+
+  <div class="card">
+    <p>
       Email: <strong>urvashij@amsc.iitr.ac.in</strong><br><br>
       Department of Applied Mathematics and Scientific Computing<br>
       Indian Institute of Technology Roorkee, India
-      </p>
-    </div>
+    </p>
+
+    <h4>Reference</h4>
+    <p>
+      Prof. Rajan Arora<br>
+      Professor, Department of Applied Mathematics and Scientific Computing, IIT Roorkee<br>
+      Email: rajan.arora@as.iitr.ac.in<br>
+      Webpage:
+      <a href="https://iitr.ac.in/Departments/Applied%20Mathematics%20and%20Scientific%20Computing%20Department/People/Faculty/400119.html" target="_blank">
+        Official Faculty Profile
+      </a>
+    </p>
   </div>
+
 </section>
 
 <footer>
@@ -221,6 +390,27 @@ footer{margin-top:80px;color:var(--muted);font-size:14px;}
 
 </div>
 </div>
+
+<script>
+const links = document.querySelectorAll(".sidebar a");
+const sections = document.querySelectorAll(".page-section");
+
+function showSection(id){
+  sections.forEach(sec => sec.classList.remove("active"));
+  const el = document.getElementById(id);
+  if(el){ el.classList.add("active"); }
+}
+
+links.forEach(link=>{
+  link.addEventListener("click",function(e){
+    e.preventDefault();
+    const id = this.getAttribute("data-section");
+    showSection(id);
+  });
+});
+
+showSection("home");
+</script>
 
 </body>
 </html>
