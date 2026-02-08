@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Urvashi Joshi | PhD Scholar</title>
+<title>Urvashi Joshi | PhD Research Scholar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@ body{
 header{
   position:fixed;
   top:0; left:0; right:0;
-  background:rgba(0,0,0,0.9);
+  background:rgba(0,0,0,0.92);
   z-index:1000;
   border-bottom:1px solid #111;
 }
@@ -57,8 +57,10 @@ nav a:hover{
 .hero{
   height:65vh;
   background:
-    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.9)),
-    url("profile.png.jpeg") center/cover no-repeat;
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.85)),
+    url("profile.png.jpeg") no-repeat;
+  background-size:cover;
+  background-position:center 20%;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -67,22 +69,22 @@ nav a:hover{
 }
 
 .hero h1{
-  font-size:40px;
-  margin-bottom:10px;
+  font-size:42px;
+  margin-bottom:8px;
   color:#fff;
 }
 
 .hero p{
   font-size:18px;
   color:#e5e7eb;
-  max-width:800px;
+  max-width:900px;
 }
 
 /* ===== Main ===== */
 .main{
   max-width:900px;
   margin:auto;
-  padding:60px 20px;
+  padding:90px 20px;
 }
 
 section{
@@ -91,7 +93,7 @@ section{
 
 section h2{
   color:#f59e0b;
-  margin-bottom:20px;
+  margin-bottom:18px;
   font-size:24px;
 }
 
@@ -103,12 +105,11 @@ li{
   margin-bottom:8px;
 }
 
-/* small separator */
 .line{
   width:120px;
   height:2px;
   background:#f59e0b;
-  margin:30px 0;
+  margin:22px 0 28px 0;
 }
 
 footer{
@@ -118,9 +119,8 @@ footer{
   font-size:14px;
 }
 
-/* spacing for fixed menu */
 .offset{
-  height:60px;
+  height:58px;
 }
 </style>
 </head>
@@ -130,13 +130,12 @@ footer{
 <header>
   <div class="navbar">
     <div class="brand">Urvashi Joshi</div>
-
     <nav>
       <a href="#home">Home</a>
       <a href="#research">Research</a>
       <a href="#education">Education</a>
       <a href="#publications">Publications</a>
-      <a href="#conferences">Workshops & Conferences</a>
+      <a href="#conferences">Workshops</a>
       <a href="#experience">Experience</a>
       <a href="#positions">Positions</a>
       <a href="#contact">Contact</a>
@@ -146,7 +145,6 @@ footer{
 
 <div class="offset" id="home"></div>
 
-<!-- ===== HERO ===== -->
 <div class="hero">
   <div>
     <h1>Urvashi Joshi</h1>
@@ -156,166 +154,142 @@ footer{
 
 <div class="main">
 
-<!-- ===== ABOUT ===== -->
 <section id="about">
+  <h2>About Me</h2>
+  <div class="line"></div>
 
-<h2>About Me</h2>
-<div class="line"></div>
+  <p>
+  I am a PhD research scholar in the Department of Applied Mathematics and Scientific Computing at
+  the Indian Institute of Technology Roorkee, working at the intersection of nonlinear partial
+  differential equations, symmetry methods and modern data-driven techniques.
+  My research explores how mathematical structures such as Lie symmetries, conservation laws
+  and self-similar solutions can be systematically used to analyse and simplify complex physical
+  and biological systems, including traffic flow and population dynamics models.
+  </p>
 
-<p>
-I am a PhD research scholar in the Department of Applied Mathematics and Scientific Computing at
-the Indian Institute of Technology Roorkee, working at the intersection of nonlinear partial
-differential equations, symmetry methods and modern data-driven techniques.
-My research explores how mathematical structures such as Lie symmetries, conservation laws
-and self-similar solutions can be systematically used to understand and simplify complex
-physical and biological systems, including traffic flow and population dynamics models.
-
-Alongside analytical and semi-analytical approaches, I am actively interested in integrating
-machine learning and physics-informed neural networks with classical PDE modelling to develop
-reliable and interpretable computational frameworks for complex dynamical systems.
-My long-term goal is to bridge rigorous mathematical analysis with emerging AI-based tools for
-next-generation scientific computing.
-</p>
-
-
+  <p>
+  Alongside analytical and semi-analytical approaches, I am actively interested in integrating
+  machine learning and physics-informed neural networks with classical PDE modelling to develop
+  reliable and interpretable computational frameworks for complex dynamical systems.
+  My long-term goal is to bridge rigorous mathematical analysis with emerging AI-based tools for
+  next-generation scientific computing.
+  </p>
 </section>
 
-<!-- ===== RESEARCH ===== -->
 <section id="research">
+  <h2>Research Areas</h2>
+  <div class="line"></div>
 
-<h2>Research Areas</h2>
-<div class="line"></div>
-
-<ul>
-  <li>Nonlinear partial differential equations</li>
-  <li>Lie symmetry analysis and invariant solutions</li>
-  <li>Conservation laws</li>
-  <li>Exact and solitonic solutions</li>
-  <li>Numerical simulation of PDEs</li>
-  <li>Physics-informed neural networks for PDEs</li>
-</ul>
-
+  <ul>
+    <li>Nonlinear partial differential equations</li>
+    <li>Lie symmetry analysis and invariant solutions</li>
+    <li>Conservation laws</li>
+    <li>Exact and solitonic solutions</li>
+    <li>Numerical simulation of PDEs</li>
+    <li>Physics-informed neural networks for PDEs</li>
+  </ul>
 </section>
 
-<!-- ===== EDUCATION ===== -->
 <section id="education">
+  <h2>Educational Background</h2>
+  <div class="line"></div>
 
-<h2>Educational Background</h2>
-<div class="line"></div>
-
-<ul>
-  <li>
-    <b>Ph.D. in Applied Mathematics and Scientific Computing</b>,  
-    Indian Institute of Technology Roorkee, India (ongoing).
-  </li>
-  <li>
-    <b>Integrated M.Sc. in Applied Mathematics and Humanities (2017–2022)</b>,  
-    National Institute of Technology Surat, India.
-  </li>
-</ul>
-
+  <ul>
+    <li>
+      <b>Ph.D. in Applied Mathematics and Scientific Computing</b>,
+      Indian Institute of Technology Roorkee, India (ongoing).
+    </li>
+    <li>
+      <b>Integrated M.Sc. in Applied Mathematics and Humanities (2017–2022)</b>,
+      National Institute of Technology Surat, India.
+    </li>
+  </ul>
 </section>
 
-<!-- ===== PUBLICATIONS ===== -->
 <section id="publications">
+  <h2>Publications & Preprints</h2>
+  <div class="line"></div>
 
-<h2>Publications & Preprints</h2>
-<div class="line"></div>
-
-<ol>
-  <li>
-    Conservation Laws and Symmetry Driven Analysis for a Biological Population Model in
-    Porous Media, <i>Pramana – Journal of Physics</i> (accepted).
-  </li>
-  <li>
-    Solitonic and Exact Solutions for a Viscous Traffic Flow Model via Lie Symmetry (preprint).
-  </li>
-  <li>
-    Self-Similarity and Physics-Informed Neural Networks for Spherical Shock Waves in a
-    Non-Ideal Radiating Gas (under preparation).
-  </li>
-</ol>
-
+  <ol>
+    <li>
+      Conservation Laws and Symmetry Driven Analysis for a Biological Population Model in
+      Porous Media, <i>Pramana – Journal of Physics</i> (accepted).
+    </li>
+    <li>
+      Solitonic and Exact Solutions for a Viscous Traffic Flow Model via Lie Symmetry (preprint).
+    </li>
+    <li>
+      Physics-informed neural networks and Lie-group self-similar analysis of spherical MHD shock waves in a non-ideal radiating dusty gas with self-gravity (under review).
+    </li>
+  </ol>
 </section>
 
-<!-- ===== WORKSHOPS & CONFERENCES ===== -->
 <section id="conferences">
+  <h2>Workshops & Conferences</h2>
+  <div class="line"></div>
 
-<h2>Workshops & Conferences</h2>
-<div class="line"></div>
-
-<ul>
-  <li>
-    Workshop on Unified Approaches to Solving Differential Equations:
-    From Classical Methods to Neural Networks (UniSDE-2025).
-  </li>
-  <li>
-    International Conference on Nonlinear Applied Analysis and Optimization (ICNAAO 2025) – paper presentation.
-  </li>
-  <li>
-    University of North Carolina at Greensboro Virtual Conference on Partial Differential Equations
-    (UNC Greensboro Virtual PDE Conference 2025).
-  </li>
-  <li>
-    International Conference on Recent Advances in Applied Mathematics (RAAM 2024).
-  </li>
-  <li>
-    Workshop on Multi-Scale Analysis cum Conference on Differential Equations (MSADE-24), IIT Ropar.
-  </li>
-</ul>
-
+  <ul>
+    <li>
+      Workshop on Unified Approaches to Solving Differential Equations:
+      From Classical Methods to Neural Networks (UniSDE-2025).
+    </li>
+    <li>
+      International Conference on Nonlinear Applied Analysis and Optimization (ICNAAO 2025).
+    </li>
+    <li>
+      University of North Carolina at Greensboro Virtual Conference on Partial Differential Equations
+      (UNC Greensboro Virtual PDE Conference 2025).
+    </li>
+    <li>
+      International Conference on Recent Advances in Applied Mathematics (RAAM 2024).
+    </li>
+    <li>
+      Workshop on Multi-Scale Analysis cum Conference on Differential Equations (MSADE-24), IIT Ropar.
+    </li>
+  </ul>
 </section>
 
-<!-- ===== EXPERIENCE ===== -->
 <section id="experience">
+  <h2>Work Experience</h2>
+  <div class="line"></div>
 
-<h2>Work Experience</h2>
-<div class="line"></div>
-
-<ul>
-  <li>Telus Digital – LLM Trainer (Project Sigma), 2025.</li>
-  <li>Turing – LLM Trainer, 2025.</li>
-  <li>Outlier – LLM Trainer, 2025.</li>
-</ul>
-
+  <ul>
+    <li>Telus Digital – LLM Trainer (Project Sigma), 2025.</li>
+    <li>Turing – LLM Trainer, 2025.</li>
+    <li>Outlier – LLM Trainer, 2025.</li>
+  </ul>
 </section>
 
-<!-- ===== POSITIONS ===== -->
 <section id="positions">
+  <h2>Positions & Responsibilities</h2>
+  <div class="line"></div>
 
-<h2>Positions & Responsibilities</h2>
-<div class="line"></div>
-
-<ul>
-  <li>Student Ambassador – IIT Kanpur, June 2021.</li>
-  <li>Volunteer – Think India (All India NIT Students Conference), 2019.</li>
-  <li>Volunteer – Prakriti (SCOSH), NIT Surat, 2018.</li>
-</ul>
-
+  <ul>
+    <li>Student Ambassador – IIT Kanpur, June 2021.</li>
+    <li>Volunteer – Think India (All India NIT Students Conference), 2019.</li>
+    <li>Volunteer – Prakriti (SCOSH), NIT Surat, 2018.</li>
+  </ul>
 </section>
 
-<!-- ===== CONTACT ===== -->
 <section id="contact">
+  <h2>Contact & Reference</h2>
+  <div class="line"></div>
 
-<h2>Contact & Reference</h2>
-<div class="line"></div>
+  <p>
+  Email: <b>urvashij@amsc.iitr.ac.in</b><br>
+  Department of Applied Mathematics and Scientific Computing<br>
+  Indian Institute of Technology Roorkee, India
+  </p>
 
-<p>
-Email: <b>urvashij@amsc.iitr.ac.in</b><br>
-Department of Applied Mathematics and Scientific Computing<br>
-Indian Institute of Technology Roorkee, India
-</p>
-
-<p>
-<b>Reference:</b><br>
-Prof. Rajan Arora<br>
-Professor, Department of Applied Mathematics and Scientific Computing, IIT Roorkee<br>
-<a style="color:#f59e0b" target="_blank"
-href="https://iitr.ac.in/Departments/Applied%20Mathematics%20and%20Scientific%20Computing%20Department/People/Faculty/400119.html">
-Official Faculty Webpage
-</a>
-</p>
-
+  <p>
+  <b>Reference</b><br>
+  Prof. Rajan Arora<br>
+  Professor, Department of Applied Mathematics and Scientific Computing, IIT Roorkee<br>
+  <a style="color:#f59e0b" target="_blank"
+  href="https://iitr.ac.in/Departments/Applied%20Mathematics%20and%20Scientific%20Computing%20Department/People/Faculty/400119.html">
+  Official Faculty Webpage
+  </a>
+  </p>
 </section>
 
 <footer>
