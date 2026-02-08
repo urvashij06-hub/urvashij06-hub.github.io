@@ -1,80 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Urvashi Joshi | PhD Student</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; line-height: 1.6; }
-    h1, h2 { color: #003366; }
-    nav a { margin-right: 15px; text-decoration: none; }
-    section { margin-top: 40px; }
-  </style>
+<meta charset="UTF-8">
+<title>Urvashi Joshi | PhD Student</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f7f8fc;
+  --white:#ffffff;
+  --primary:#6c7cff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --border:#eef0f6;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Plus Jakarta Sans",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.main{
+  display:flex;
+  min-height:100vh;
+}
+.sidebar{
+  width:220px;
+  background:var(--white);
+  border-right:1px solid var(--border);
+  padding:40px 24px;
+  position:fixed;
+  top:0;left:0;bottom:0;
+}
+.sidebar h2{margin:0 0 30px 0;font-size:18px;}
+.sidebar a{
+  display:block;
+  text-decoration:none;
+  color:#374151;
+  font-weight:500;
+  margin-bottom:18px;
+}
+.sidebar a:hover{color:var(--primary);}
+.content{
+  margin-left:220px;
+  width:100%;
+  padding:50px 60px;
+}
+.hero{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:50px;
+  align-items:center;
+}
+.photo-box{
+  background:var(--card);
+  padding:16px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.05);
+  text-align:center;
+}
+.photo-box img{
+  width:100%;
+  border-radius:14px;
+  object-fit:cover;
+}
+.hero h1{margin:0;font-size:38px;font-weight:700;}
+.hero h3{margin:10px 0 14px 0;font-weight:500;color:var(--primary);}
+.hero p{color:var(--muted);line-height:1.8;max-width:720px;}
+.hero-buttons{margin-top:24px;display:flex;gap:14px;}
+.btn{
+  text-decoration:none;
+  padding:10px 18px;
+  border-radius:10px;
+  font-weight:600;
+  font-size:14px;
+}
+.btn-main{background:var(--primary);color:white;}
+.btn-soft{border:1px solid var(--primary);color:var(--primary);}
+section{margin-top:80px;}
+section h2{font-size:26px;margin-bottom:26px;}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:22px;
+}
+.card{
+  background:var(--card);
+  border-radius:18px;
+  padding:26px;
+  border:1px solid var(--border);
+}
+.card ul,.card ol{padding-left:18px;line-height:1.8;}
+.card li{margin-bottom:8px;}
+footer{margin-top:80px;color:var(--muted);font-size:14px;}
+@media(max-width:900px){
+  .sidebar{
+    position:relative;width:100%;
+    border-right:none;border-bottom:1px solid var(--border);
+  }
+  .content{margin-left:0;padding:40px 24px;}
+  .hero{grid-template-columns:1fr;}
+}
+</style>
 </head>
+
 <body>
 
-<h1>Urvashi Joshi</h1>
-<p>PhD Student, Department of Applied Mathematics and Scientific Computing, IIT Roorkee</p>
+<div class="main">
 
-<nav>
-  <a href="#home">Home</a>
+<aside class="sidebar">
+  <h2>Urvashi Joshi</h2>
+  <a href="#about">About</a>
   <a href="#research">Research</a>
   <a href="#publications">Publications</a>
-  <a href="#workshops">Workshops & Conferences</a>
-  <a href="#experience">Experience</a>
+  <a href="#conferences">Conferences</a>
   <a href="#contact">Contact</a>
-</nav>
+</aside>
 
-<section id="home">
-<h2>Home</h2>
-<p>
-I am a PhD student in the Department of Applied Mathematics and Scientific Computing at
-Indian Institute of Technology Roorkee. My research interests include nonlinear partial
-differential equations, conservation laws, Lie symmetry analysis, invariant and exact
-solutions, numerical simulation of PDEs and physics-informed neural networks.
-</p>
+<div class="content">
+
+<section class="hero" id="about">
+
+  <div class="photo-box">
+    <img src="profile.jpg" alt="Urvashi Joshi">
+  </div>
+
+  <div>
+    <h1>Urvashi Joshi</h1>
+    <h3>PhD Student · Applied Mathematics & Scientific Computing</h3>
+
+    <p>
+    I am a PhD student at the Indian Institute of Technology Roorkee.
+    My research focuses on nonlinear partial differential equations,
+    conservation laws, Lie symmetry analysis, exact and invariant solutions,
+    and numerical and data-driven methods for complex physical and biological systems.
+    I am also interested in physics-informed neural networks for PDE-based models.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn btn-main" href="#publications">View Publications</a>
+      <a class="btn btn-soft" href="#contact">Contact Me</a>
+    </div>
+  </div>
+
 </section>
 
 <section id="research">
-<h2>Research Interests</h2>
-<ul>
-  <li>Nonlinear partial differential equations</li>
-  <li>Lie symmetry analysis and invariant solutions</li>
-  <li>Conservation laws</li>
-  <li>Exact and solitonic solutions</li>
-  <li>Numerical simulation of PDEs</li>
-  <li>Physics-informed neural networks</li>
-</ul>
+  <h2>Research Interests</h2>
+  <div class="cards">
+    <div class="card">
+      <ul>
+        <li>Nonlinear partial differential equations</li>
+        <li>Lie symmetry analysis and invariant solutions</li>
+        <li>Conservation laws</li>
+        <li>Exact and solitonic solutions</li>
+        <li>Numerical simulation of PDEs</li>
+        <li>Physics-informed neural networks</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section id="publications">
-<h2>Publications and Preprints</h2>
-<ol>
-  <li>
-    Conservation Laws and Symmetry Driven Analysis for a Biological Population Model in
-    Porous Media (accepted in Pramana – Journal of Physics).
-  </li>
-  <li>
-    Solitonic and Exact Solutions for a Viscous Traffic Flow Model via Lie Symmetry.
-  </li>
-  <li>
-    Self-Similarity and Physics-Informed Neural Networks for Spherical Shock Waves in a
-    Non-Ideal Radiating Gas (under preparation).
-  </li>
-</ol>
+  <h2>Publications & Preprints</h2>
+  <div class="cards">
+    <div class="card">
+      <ol>
+        <li>
+        Conservation Laws and Symmetry Driven Analysis for a Biological Population Model in Porous Media,
+        <em>Pramana – Journal of Physics</em> (accepted).
+        </li>
+        <li>
+        Solitonic and Exact Solutions for a Viscous Traffic Flow Model via Lie Symmetry (preprint).
+        </li>
+        <li>
+        Self-Similarity and Physics-Informed Neural Networks for Spherical Shock Waves in a Non-Ideal
+        Radiating Gas (under preparation).
+        </li>
+      </ol>
+    </div>
+  </div>
 </section>
 
-<section id="workshops">
-<h2>Workshops and Conferences</h2>
-<ul>
-  <li>Workshop on Unified Approaches to Solving Differential Equations (UniSDE-2025)</li>
-  <li>International Conference on Nonlinear Applied Analysis and Optimization (ICNAAO 2025)</li>
-  <li>UNC Greensboro Virtual PDE Conference (2025)</li>
-  <li>International Conference on Recent Advances in Applied Mathematics (RAAM 2024)</li>
-  <li>Workshop on Multi-Scale Analysis and Differential Equations (MSADE-24), IIT Ropar</li>
-</ul>
+<section id="conferences">
+  <h2>Workshops & Conferences</h2>
+  <div class="cards">
+    <div class="card">
+      <ul>
+        <li>UniSDE-2025 – Workshop on Unified Approaches to Solving DEs</li>
+        <li>ICNAAO 2025 – Paper presentation</li>
+        <li>UNC Greensboro Virtual PDE Conference 2025 – Paper presentation</li>
+        <li>RAAM 2024 – Paper presentation</li>
+        <li>MSADE-24 – IIT Ropar</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section id="experience">
-<h2>Experience</h2>
-<ul>
-  <li>LLM Trainer – Telus Digital, Turing, Outlier (2025)</li>
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="cards">
+    <div class="card">
+      <p>
+      Email: <strong>urvashij@amsc.iitr.ac.in</strong><br><br>
+      Department of Applied Mathematics and Scientific Computing<br>
+      Indian Institute of Technology Roorkee, India
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+© Urvashi Joshi
+</footer>
+
+</div>
+</div>
+
+</body>
+</html>
