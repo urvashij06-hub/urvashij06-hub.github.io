@@ -126,6 +126,48 @@ footer{
 .offset{
   height:58px;
 }
+  /* ================= MOBILE FIX ================= */
+
+@media (max-width: 768px){
+
+  .navbar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  nav{
+    margin-top:8px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  nav a{
+    margin-left:0;
+    font-size:13px;
+  }
+
+  .hero{
+    height:auto;
+    min-height:60vh;
+    padding:90px 15px 50px 15px;
+    background-position:center 15%;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .main{
+    padding:60px 15px;
+  }
+
+}
+
 </style>
 </head>
 
